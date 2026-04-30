@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function WhatWeOffer() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -6,22 +7,22 @@ export default function WhatWeOffer() {
 
     const services = [
         {
-            video: "/s1.mp4",
-            title: "A Distinctive Tigris Aurum Experience",
+            image: "/story.jpg", // Changed from video to image
+            title: "Uncompromising Quality at the Source",
             description:
-                "Tigris Aurum brings together comforting drinks, satisfying food, and a welcoming atmosphere designed for everyday moments worth savoring.",
+                "We don't settle for ordinary leaves or generic blends. Every tea and ingredient is carefully selected from the world's finest origins; because what goes in determines everything that comes out.",
         },
         {
-            video: "/s2.mp4",
-            title: "Signature Sips With Lasting Flavor",
+            image: "/story.jpg", // Changed from video to image
+            title: "Crafted With Mastery, Not Mass Production",
             description:
-                "From creamy coffees to aromatic chai, every drink is prepared to feel smooth, memorable, and easy to come back for.",
+                "Each blend is refined through expertise and precision; never rushed, never replicated. Tigris Aurum is built on the belief that true quality cannot be scaled down.",
         },
         {
-            video: "/s3.mp4",
-            title: "Comfort Food, Refined Identity",
+            image: "/story.jpg", // Changed from video to image
+            title: "Luxury That Goes Beyond the Cup",
             description:
-                "Our menu balances familiar comfort with polished presentation so every visit feels casual, inviting, and unmistakably Tigris Aurum.",
+                "From the first pour to the final sip, we craft an experience; rich hot chocolates, rare teas, and indulgent milkshakes that don't just taste exceptional, they feel it.",
         },
     ];
 
@@ -33,7 +34,7 @@ export default function WhatWeOffer() {
             }, 4000);
             return () => clearInterval(timer);
         }
-    }, [hovered]);
+    }, [hovered, services.length]);
 
     const getCardStyle = (index) => {
         const total = services.length;
@@ -54,17 +55,12 @@ export default function WhatWeOffer() {
     return (
         <section id="about" className="relative scroll-m-10 py-12 px-4 sm:px-6 md:px-12 overflow-visible bg-white">
             <div className="max-w-7xl mx-auto text-center relative z-10">
-                {/* Heading */}
-                <span className="inline-block text-xs sm:text-sm font-medium px-3 sm:px-4 py-1 rounded-full mb-3 sm:mb-4 bg-[#E8D28A]/50 text-[#C8A950]">
-                    Our Story
-                </span>
-
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[#111111] px-2">
-                    Why Tigris Aurum Stands Out
+                    Why Tigris Aurum Is in a <span className="text-[#C9A84C]!">Class </span>of Its Own
                 </h2>
 
                 <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-12 md:mb-14 text-[#333333] px-2">
-                    Tigris Aurum is built around quality drinks, flavorful food, and a setting that makes every visit feel easy, warm, and memorable.
+                    Tigris Aurum isn't just a drink brand; it's a standard. Every blend, every batch, every sip is a testament to what premium truly means.
                 </p>
 
                 {/* Card Slider */}
@@ -81,14 +77,11 @@ export default function WhatWeOffer() {
                             )}`}
                         >
                             <div className="rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-500 h-[380px] sm:h-[400px] md:h-[420px] flex flex-col border border-[#E8D9A8]/70 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(221,182,78,0.3)]">
-                                {/* Video Header */}
+                                {/* Image Header (Replaced Video) */}
                                 <div className="relative h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden">
-                                    <video
-                                        src={s.video}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
+                                    <img
+                                        src={s.image}
+                                        alt={s.title}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -107,8 +100,6 @@ export default function WhatWeOffer() {
                             </div>
                         </div>
                     ))}
-
-                    {/* Navigation Buttons */}
                     <button
                         onClick={() =>
                             setActiveIndex(
@@ -116,31 +107,31 @@ export default function WhatWeOffer() {
                             )
                         }
                         aria-label="Previous slide"
-                        className="absolute left-2 sm:left-4 md:left-6 mt-100 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md text-base sm:text-lg font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-white text-black bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center"
+                        className="absolute left-2 sm:left-4 md:left-6 z-40 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md transition-all duration-300 hover:scale-110 active:scale-95 bg-white text-black bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center"
                     >
-                        â€¹
+                        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
+
                     <button
                         onClick={() => setActiveIndex((prev) => (prev + 1) % services.length)}
                         aria-label="Next slide"
-                        className="absolute right-2 sm:right-4 md:right-6 mt-100 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md text-base sm:text-lg font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-white text-black bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center"
+                        className="absolute right-2 sm:right-4 md:right-6 z-40 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md transition-all duration-300 hover:scale-110 active:scale-95 bg-white text-black bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center"
                     >
-                        â€º
+                        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                     </button>
                 </div>
 
-                {/* Dot Indicators for Mobile */}
-                <div className="flex justify-center gap-2">
+                {/* Dot Indicators */}
+                <div className="flex justify-center gap-2 mt-4">
                     {services.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => setActiveIndex(i)}
                             aria-label={`Go to slide ${i + 1}`}
-                            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${
-                                i === activeIndex
-                                    ? "bg-[#E8D28A] w-6 sm:w-8"
-                                    : "bg-[#E8D28A]/30"
-                            }`}
+                            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${i === activeIndex
+                                ? "bg-[#E8D28A] w-6 sm:w-8"
+                                : "bg-[#E8D28A]/30"
+                                }`}
                         />
                     ))}
                 </div>

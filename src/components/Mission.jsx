@@ -57,8 +57,8 @@ const Mission = () => {
             <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center z-10">
                 {/* Left Section - Tabs */}
                 <div className="flex-1 max-w-2xl" data-aos="fade-right">
-                    <h2 className="text-3xl md:text-5xl font-extrabold mb-8">
-                        SAVOR THE <span className="text-[#C9A84C]">FLAVOR</span>,<br /> ONE SIP AT A TIME.
+                    <h2 className="text-3xl md:text-5xl font-extrabold mb-8 uppercase">
+                        Every <span className="text-[#C9A84C]!">Sip</span>,<br /> A Statement of Excellence.
                     </h2>
 
                     <div className="space-y-4">
@@ -78,15 +78,15 @@ const Mission = () => {
 
                                 {/* Show Content when Active */}
                                 {activeTab === tab.id && (
-                                    <div 
+                                    <div
                                         className="mt-2 p-4 bg-[#FCFAF5] rounded-b-md shadow-md border border-[#E8DAB0] hover:shadow-[0_8px_24px_rgba(201,168,76,0.2)] transition-all duration-300"
                                         data-aos="fade-down"
                                         data-aos-duration="500"
                                     >
                                         <p>
                                             {tab.id === "mission"
-                                                ? "Our mission is to make Tigris Aurum a welcoming destination for quality drinks, satisfying food, and meaningful moments shared in a relaxed setting."
-                                                : "Our vision is to grow Tigris Aurum into a recognizable name for warm hospitality, distinctive flavor, and an experience guests look forward to returning to."}
+                                                ? "At Tigris Aurum, our mission is to redefine what a premium drink experience looks like. We are dedicated to sourcing the world's finest teas, crafting velvety hot chocolates, and creating indulgent milkshakes that go far beyond the expected. Every blend is a commitment; to quality, to craft, and to the discerning few who refuse to settle for anything less."
+                                                : "To become the world's most distinguished name in premium tea and luxury beverages; a brand synonymous with refinement, mastery, and an unwavering standard of excellence. We envision a world where every cup of Tigris Aurum is not just a drink, but a moment worth savouring."}
                                         </p>
                                     </div>
                                 )}
@@ -101,19 +101,19 @@ const Mission = () => {
                         {/* Animated linear overlay */}
                         <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
 
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 leading-snug relative z-10">
-                            MADE WITH CARE, <br />
-                            SHARED WITH STYLE
+                        <h3 className="text-lg sm:text-xl uppercase md:text-2xl font-bold mb-4 leading-snug relative z-10">
+                            Sourced With Precision. <br />
+                            Poured With Purpose.
                         </h3>
 
                         <div className="space-y-3 mb-6 relative z-10">
                             <div className="flex items-center gap-2 bg-[#F4EDDD] px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <FaCheck className="text-[#C9A84C]" />
-                                Signature drinks
+                                Single-Origin Teas
                             </div>
                             <div className="flex items-center gap-2 bg-[#F4EDDD] px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <FaCheck className="text-[#C9A84C]" />
-                                Freshly prepared bites
+                                Reserve Blends
                             </div>
                         </div>
 

@@ -20,9 +20,9 @@ const Gallery = () => {
     <section className="w-full bg-[#FCFAF5] py-16 -mt-15">
       {/* Heading */}
       <div className="text-center mb-10" data-aos="fade-up">
-        <h2 className="text-4xl md:text-6xl font-bold mb-7 mt-3">Our Gallery</h2>
-        <p className="text-sm md:text-lg font-semibold" data-aos="fade-up" data-aos-delay="200">
-          Take a visual journey through our delicious offerings and vibrant atmosphere
+        <h2 className="text-4xl md:text-6xl font-bold mb-7 mt-3">A Glimpse Into the <span className="text-[#C9A84C]!">Tigris Aurum</span> World</h2>
+        <p className="max-w-2xl mx-auto text-sm md:text-lg font-semibold" data-aos="fade-up" data-aos-delay="200">
+          Every image tells the story of craft, quality, and intention. From rare leaves to the final pour; this is what excellence looks like.
         </p>
       </div>
 

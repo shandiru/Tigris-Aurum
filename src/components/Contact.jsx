@@ -49,9 +49,9 @@ const Contact = () => {
       </div>
 
       <div className={`text-center mb-10 relative z-10 transition-all duration-1000 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h2 className="text-4xl md:text-6xl font-bold mb-4 text-black">Order & Get In Touch</h2>
-        <p className="text-sm md:text-lg text-gray-700 font-semibold max-w-xl mx-auto">
-          Place your order or send us a message via WhatsApp.
+        <h2 className="text-4xl md:text-6xl font-bold mb-4 text-black">Begin Your <span className="text-[#C9A84C]!">Tigris Aurum</span> Experience</h2>
+        <p className="text-sm md:text-lg text-gray-700 font-semibold max-w-3xl mx-auto">
+          Ready to sip beyond ordinary? Reach out to place your order or simply get in touch; we respond with the same care and precision we put into every blend.
         </p>
       </div>
 

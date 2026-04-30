@@ -4,7 +4,7 @@ import CoffeeSection from "../components/CoffeeSection"
 import Contact from "../components/Contact"
 import Gallery from "../components/Gallery"
 import Mission from "../components/Mission"
-import NavbarWithHero from "../components/HeroSection"
+import HeroSection from "../components/HeroSection"
 import TestimonialCarousel from "../components/TestimonialCarousel"
 import WhatWeOffer from '../components/WhatWeOffer'
 import MenuScroll from '../components/MenuScroll'
@@ -13,9 +13,9 @@ import MenuDisplay from '../components/MenuDisplay'
 const Home = () => {
     return (
         <div>
-            <NavbarWithHero />
+            <HeroSection />
             <WhatWeOffer />
-            <ChaiSection />
+            {/* <ChaiSection /> */}
             <MenuScroll />
             <MenuDisplay />
             <Mission />

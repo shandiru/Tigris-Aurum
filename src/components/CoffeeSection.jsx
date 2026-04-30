@@ -324,11 +324,11 @@ export default function CoffeeSection() {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
             <h1 className="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-6">
-              FUELING YOUR DAY<br />
-              THE <span className="text-[#C8A950]">PREMIUM</span> WAY.
+              The Gold <br />
+              Standard<span className="text-[#C8A950]!"> of<br /> </span>Green.
             </h1>
             <p className="text-base mb-8 max-w-lg mx-auto lg:mx-0" data-aos="fade-up">
-              Sip into serenity with the vibrant energy of matcha. Packed with antioxidants to power your mind and body.
+              Not all matcha is created equal. Tigris Aurum sources only ceremonial-grade leaves; where colour, texture, and depth speak before the first sip is even taken.
             </p>
           </div>
 
@@ -359,7 +359,7 @@ export default function CoffeeSection() {
               <div>
                 <h3 className="text-lg font-semibold">PREMIUM MATCHA</h3>
                 <p className="text-sm mt-1 max-w-xs">
-                  Handpicked leaves stone-ground to perfection — for a smooth, rich, and earthy experience.
+                  <strong>Ceremonial Grade. Nothing Less.</strong> Stone-ground from the finest shade-grown leaves, our matcha delivers an unrivalled depth of flavour; vivid, smooth, and complex in every cup.
                 </p>
               </div>
             </div>
@@ -371,7 +371,7 @@ export default function CoffeeSection() {
               <div>
                 <h3 className="text-lg font-semibold">ORIGINAL BLEND</h3>
                 <p className="text-sm mt-1 max-w-xs">
-                  Crafted with care to deliver calm focus and lasting energy - the natural way.
+                  <strong>Engineered for Clarity. Built for Performance.</strong> A precisely crafted blend designed to sharpen focus, sustain energy, and deliver calm without compromise; the intelligent alternative to ordinary caffeine.
                 </p>
               </div>
             </div>

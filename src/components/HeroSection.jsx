@@ -8,18 +8,13 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-1 items-center">
         {/* LEFT CONTENT */}
         <div className="relative z-10 text-center lg:text-left">
-          <div className="inline-flex items-center rounded-full border border-[#D7C48C] bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-[#A7862C] shadow-sm">
-            Tigris Aurum
-          </div>
-
           <h1 className="mt-5 text-3xl italic sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Tigris Aurum <br className="hidden sm:block" />
-            crafted for every occasion
+            Rare Teas & <span className="text-[#C9A84C]!">Indulgences</span>, <br className="hidden sm:block" />
+            Crafted Beyond Ordinary.
           </h1>
 
           <p className="max-w-xl mx-auto lg:mx-0 mb-8 text-base sm:text-lg">
-            Tigris Aurum serves a warm mix of handcrafted chai, bold signature drinks,
-            and satisfying bites made for relaxed catchups, quick stops, and special moments.
+            Tigris Aurum brings you an exceptional collection of premium teas, velvety hot chocolates, and indulgent milkshakes; each one sourced with intention, blended with mastery, and served for those who demand more than the ordinary cup.
           </p>
 
           <a href="#menu">

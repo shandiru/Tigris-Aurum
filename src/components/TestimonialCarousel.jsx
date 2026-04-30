@@ -85,7 +85,7 @@ export default function TestimonialCarousel() {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-black font-semibold tracking-widest uppercase text-lg">
-            Our Testimonials
+            Our <span className="text-[#C9A84C]!">Testimonials</span>
           </p>
         </div>
 
