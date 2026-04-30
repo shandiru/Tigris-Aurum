@@ -45,17 +45,19 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#contact"
-            className="flex items-center gap-2 bg-white text-[#C9A84C]! px-5 py-2 rounded-md font-semibold shadow hover:bg-[#E8D28A] hover:text-black! transition"
+            className="flex items-center gap-2 rounded-md bg-[#E8D28A] px-5 py-2 font-semibold text-black shadow transition hover:bg-[#E8D28A]"
+            style={{ color: "#111111" }}
           >
-            <FiShoppingCart />
-            Order Now
+            <FiShoppingCart className="text-white" />
+            <span className="text-white">Order Now</span>
           </HashLink>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden text-white focus:outline-none"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          className="lg:hidden rounded-md border border-[#C9A84C]/40 bg-white/10 p-2 text-[#E8D28A] shadow-sm transition hover:bg-[#C9A84C] hover:text-black focus:outline-none focus:ring-2 focus:ring-[#E8D28A]/70"
         >
           {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
         </button>
@@ -83,7 +85,7 @@ const Navbar = () => {
             smooth
             to="/#contact"
             onClick={() => setMenuOpen(false)}
-            className="flex items-center gap-2 bg-white text-[#1A1A1A] px-4 py-2 rounded-md font-semibold shadow hover:bg-[#F6EFCB] transition"
+            className="flex w-full items-center justify-center gap-2 rounded-md bg-[#E8D28A] px-4 py-3 text-base font-bold text-black shadow transition hover:bg-[#F1E2A8]"
           >
             <FiShoppingCart />
             Order Now
