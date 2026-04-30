@@ -17,11 +17,11 @@ const images = [
 const Gallery = () => {
 
   return (
-    <section className="w-full bg-[#C9A84C] text-black py-16 -mt-15">
+    <section className="w-full bg-[#FCFAF5] py-16 -mt-15">
       {/* Heading */}
       <div className="text-center mb-10" data-aos="fade-up">
-        <h2 className="text-4xl md:text-6xl font-bold mb-7 mt-3 text-white">Our Gallery</h2>
-        <p className="text-sm md:text-lg text-white font-semibold" data-aos="fade-up" data-aos-delay="200">
+        <h2 className="text-4xl md:text-6xl font-bold mb-7 mt-3">Our Gallery</h2>
+        <p className="text-sm md:text-lg font-semibold" data-aos="fade-up" data-aos-delay="200">
           Take a visual journey through our delicious offerings and vibrant atmosphere
         </p>
       </div>
@@ -41,7 +41,7 @@ const Gallery = () => {
               key={i}
               className="flex-shrink-0 w-64 h-60 rounded-xl 
               transform 
-              hover:scale-105 cursor-pointer shadow-lg hover:shadow-[#C9A84C] border-2 border-transparent hover:border-[#C9A84C] transition-all duration-300 ease-in-out"
+              hover:scale-105 cursor-pointer shadow-lg hover:shadow-[0_16px_36px_rgba(201,168,76,0.22)] border-2 border-transparent hover:border-[#C9A84C] transition-all duration-300 ease-in-out"
               data-aos="zoom-in"
             >
               <img

@@ -3,16 +3,21 @@ import ContactForm from "./ContactForm";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br  from-[#8F7533] via-[#C9A84C] to-[#8F7533] text-white py-20 px-2">
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#fcfaf5_0%,#f4eddd_55%,#fffdf8_100%)] py-20 px-2">
+      <div className="absolute inset-0 opacity-50" style={{ background: "radial-gradient(circle at top left, rgba(201,168,76,0.18), transparent 32%), radial-gradient(circle at bottom right, rgba(201,168,76,0.12), transparent 28%)" }} />
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-1 items-center">
         {/* LEFT CONTENT */}
-        <div className="text-center lg:text-left">
-          <h1 className="text-3xl italic sm:text-4xl md:text-5xl font-bold text-[#C8A950] mb-6 leading-tight">
+        <div className="relative z-10 text-center lg:text-left">
+          <div className="inline-flex items-center rounded-full border border-[#D7C48C] bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-[#A7862C] shadow-sm">
+            Samochai House
+          </div>
+
+          <h1 className="mt-5 text-3xl italic sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Samosa and Chai <br className="hidden sm:block" />
             for every occasion
           </h1>
 
-          <p className="text-gray-300 max-w-xl mx-auto lg:mx-0 mb-8 text-base sm:text-lg">
+          <p className="max-w-xl mx-auto lg:mx-0 mb-8 text-base sm:text-lg">
             Samochai brings the vibrant, authentic flavors of Bangladeshi street
             food straight to you. Freshly made, perfectly spiced, unforgettable taste.
           </p>
@@ -20,11 +25,11 @@ const HeroSection = () => {
           <a href="#menu">
             <button className="
               relative px-8 py-4 rounded-lg font-bold text-lg
-              bg-gradient-to-r from-[#E8D28A] to-[#c8a950]
+              bg-gradient-to-r from-[#E8D28A] to-[#C9A84C]
               text-black
               overflow-hidden group
               transition-all duration-500
-              hover:scale-105 hover:shadow-[0_0_25px_rgba(232,210,138,0.6)]
+              hover:scale-105 hover:shadow-[0_16px_32px_rgba(201,168,76,0.28)]
             ">
               <span className="relative z-10">See Menu</span>
 

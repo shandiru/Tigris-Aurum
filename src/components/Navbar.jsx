@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black to-[#C9A84C] text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 border-b border-[#C9A84C]/25 bg-[#151515]/92 text-white backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-6 lg:px-0">
 
         {/* Logo */}
@@ -67,7 +67,7 @@ const Navbar = () => {
         className={`lg:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
       >
-        <div className="bg-gradient-to-b from-black to-[#A7862C] px-6 py-5 space-y-4">
+        <div className="border-t border-[#C9A84C]/15 bg-[#151515] px-6 py-5 space-y-4">
           {navLinks.map((link) => (
             <HashLink
               key={link.name}

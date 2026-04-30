@@ -31,14 +31,14 @@ const Menu = () => {
   return (
     <section
       id="menu"
-      className="relative w-full scroll-m-10 bg-[#C9A84C] py-16 px-6"
+      className="relative w-full scroll-m-10 bg-[#FCFAF5] py-16 px-6"
     >
       {/* Title */}
       <div className="text-center mb-8">
         <h2 data-aos="fade-up" className="text-4xl md:text-6xl font-bold glow-effect">
           Menu
         </h2>
-        <p data-aos="fade-up" className="text-white mt-2">
+        <p data-aos="fade-up" className="mt-2">
           Discover the authentic taste of Sylhet street food
         </p>
       </div>
@@ -51,7 +51,7 @@ const Menu = () => {
             onClick={() => setSelected(cat)}
             className={`category-button px-4 py-2 rounded-md text-sm font-medium ${selected === cat
                 ? "bg-[#E8D28A] text-black pulse-effect active"
-                : "bg-white text-[#C9A84C]"
+                : "bg-white text-[#1A1A1A] border border-[#E5D5A3]"
               }`}
           >
             {cat}
@@ -65,7 +65,7 @@ const Menu = () => {
           <div
             key={i}
             data-aos="fade-up"
-            className="menu-card bg-[#8F7533]/90 rounded-lg shadow-lg overflow-hidden"
+            className="menu-card bg-white rounded-2xl border border-[#E8DAB0] shadow-lg overflow-hidden"
           >
             <div className="relative overflow-hidden ">
               <img
@@ -79,15 +79,15 @@ const Menu = () => {
 
             <div className="p-6 pt-10">
               <div className="flex justify-between items-center mb-1">
-                <h3 className="text-lg font-bold text-[#C8A950]">
+                <h3 className="text-lg font-bold">
                   {item.title}
                 </h3>
-                <span className="text-[#C9A84C] font-semibold">
+                <span className="text-[#A7862C] font-semibold">
                   {item.price}
                 </span>
               </div>
               {item.desc && (
-                <p className="text-sm text-gray-300">{item.desc}</p>
+                <p className="text-sm">{item.desc}</p>
               )}
             </div>
           </div>

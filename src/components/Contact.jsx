@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="scroll-m-10 min-h-screen w-full bg-white text-white p-4 md:p-12 relative overflow-hidden">
+    <div id='contact' className="scroll-m-10 min-h-screen w-full bg-[#FCFAF5] p-4 md:p-12 relative overflow-hidden">
       {/* Background elements */}
       <div
         className="absolute inset-0 opacity-30"
@@ -56,8 +56,8 @@ const Contact = () => {
       </div>
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 relative z-10">
-        <div className={`bg-gradient-to-br from-[#C9A84C] to-[#A7862C] rounded-xl p-6 md:p-8 shadow-2xl transition-all duration-1000 hover:shadow-[#C9A84C]/50 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#C8A950]">Place Your Order</h2>
+        <div className={`rounded-[28px] border border-[#E6D39C] bg-white p-6 md:p-8 shadow-[0_20px_60px_rgba(26,26,26,0.12)] transition-all duration-1000 hover:shadow-[0_20px_60px_rgba(201,168,76,0.18)] ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Place Your Order</h2>
 
           {/* Customer Info */}
           <div className="space-y-4 mb-6">
@@ -69,7 +69,7 @@ const Contact = () => {
                   placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)} *`}
                   value={form[field]}
                   onChange={handleChange}
-                  className={`bg-[#1A1A1A] border ${errors[field] ? 'border-red-500' : 'border-[#C9A84C]/50'} placeholder-gray-400 rounded-lg p-3 w-full focus:ring-2 focus:ring-[#C9A84C] transition-all text-white outline-none`}
+                  className={`bg-[#FCFAF5] border ${errors[field] ? 'border-red-500' : 'border-[#D8C28A]'} placeholder-gray-400 rounded-lg p-3 w-full focus:ring-2 focus:ring-[#C9A84C] transition-all text-[#1A1A1A] outline-none`}
                 />
                 {errors[field] && <p className="text-red-400 text-xs mt-1">{errors[field]}</p>}
               </div>
@@ -78,22 +78,22 @@ const Contact = () => {
 
           {/* Menu Items */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-4 text-[#C8A950] flex items-center gap-2">
-              <Utensils className="w-5 h-5 text-[#C8A950]" />
+            <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <Utensils className="w-5 h-5 text-[#C9A84C]" />
               Select Menu Items
             </h3>
 
             {/* Custom Scrollbar using inline Tailwind Utilities */}
             <div className="space-y-4 max-h-96 overflow-y-auto pr-2 
               [&::-webkit-scrollbar]:w-[6px] 
-              [&::-webkit-scrollbar-track]:bg-[#1A1A1A] 
+              [&::-webkit-scrollbar-track]:bg-[#F4EDDD] 
               [&::-webkit-scrollbar-track]:rounded-full
               [&::-webkit-scrollbar-thumb]:bg-[#C9A84C] 
               [&::-webkit-scrollbar-thumb]:rounded-full
               hover:[&::-webkit-scrollbar-thumb]:bg-[#B8953F]">
               
               {menuItems.map((m, index) => (
-                <div key={m.id} className="bg-[#1A1A1A] rounded-lg p-4 border border-[#C9A84C]/30 hover:border-[#C9A84C]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A84C]/30">
+                <div key={m.id} className="bg-[#FCFAF5] rounded-2xl p-4 border border-[#E6D39C] hover:border-[#C9A84C]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A84C]/20">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-[#C9A84C] font-semibold text-sm bg-[#C9A84C]/20 px-3 py-1 rounded-full">
                       Item #{index + 1}
@@ -109,7 +109,7 @@ const Contact = () => {
                     <select
                       value={m.category}
                       onChange={(e) => handleMenuChange(m.id, "category", e.target.value)}
-                      className="bg-[#C9A84C] border border-[#C9A84C]/50 text-white rounded-lg p-2.5 w-full outline-none"
+                      className="bg-white border border-[#D8C28A] text-[#1A1A1A] rounded-lg p-2.5 w-full outline-none"
                     >
                       <option value="">Select Category</option>
                       {categories.map((c) => <option key={c} value={c}>{c}</option>)}
@@ -119,7 +119,7 @@ const Contact = () => {
                       value={m.item}
                       disabled={!m.category}
                       onChange={(e) => handleMenuChange(m.id, "item", e.target.value)}
-                      className="bg-[#C9A84C] border border-[#C9A84C]/50 text-white rounded-lg p-2.5 w-full disabled:opacity-50 outline-none"
+                      className="bg-white border border-[#D8C28A] text-[#1A1A1A] rounded-lg p-2.5 w-full disabled:opacity-50 outline-none"
                     >
                       <option value="">Select Item</option>
                       {allItems.filter((it) => it.category === m.category).map((it) => (
@@ -128,13 +128,13 @@ const Contact = () => {
                     </select>
 
                     <div className="flex items-center gap-3">
-                      <label className="text-sm text-gray-300">Quantity:</label>
+                      <label className="text-sm text-[#2C2C2C]">Quantity:</label>
                       <input
                         type="number"
                         min="1"
                         value={m.quantity}
                         onChange={(e) => handleMenuChange(m.id, "quantity", +e.target.value || 1)}
-                        className="bg-[#C9A84C] border border-[#C9A84C]/50 text-white rounded-lg p-2 w-20 text-center outline-none"
+                        className="bg-white border border-[#D8C28A] text-[#1A1A1A] rounded-lg p-2 w-20 text-center outline-none"
                       />
                     </div>
                   </div>
@@ -143,7 +143,7 @@ const Contact = () => {
             </div>
             {errors.menuItems && <p className="text-red-400 text-sm mt-2">{errors.menuItems}</p>}
 
-            <button onClick={addMenuItem} className="w-full mt-4 bg-gradient-to-r from-[#C9A84C] to-[#B8953F] text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-all">
+            <button onClick={addMenuItem} className="w-full mt-4 bg-gradient-to-r from-[#E8D28A] to-[#C9A84C] text-[#1A1A1A] font-semibold py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition-all">
               <Plus size={20} /> Add More Items
             </button>
           </div>
@@ -154,7 +154,7 @@ const Contact = () => {
             rows="3"
             value={form.message}
             onChange={handleChange}
-            className="bg-[#1A1A1A] border border-[#C9A84C]/50 text-white rounded-lg p-3 w-full resize-none outline-none mb-6"
+            className="bg-[#FCFAF5] border border-[#D8C28A] text-[#1A1A1A] rounded-lg p-3 w-full resize-none outline-none mb-6"
           />
 
           <button
@@ -170,43 +170,43 @@ const Contact = () => {
 
         {/* Right Info Section */}
         <div className={`flex flex-col gap-6 transition-all duration-1000 delay-300 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-          <div className="bg-gradient-to-br from-[#C9A84C] to-[#A7862C] rounded-xl p-5 flex gap-4 items-center shadow-xl">
+          <div className="rounded-2xl border border-[#E6D39C] bg-white p-5 flex gap-4 items-center shadow-lg">
             <div className="w-12 h-12 flex-shrink-0 rounded-full bg-gradient-to-br from-[#C8A950] to-[#b89840] flex items-center justify-center text-black">
               <MapPin size={24} />
             </div>
             <div>
-              <h3 className="font-semibold text-[#C8A950] mb-1">Location</h3>
-              <p className="text-gray-300 text-sm">9a Great Central Road, Loughborough, England, LE11 1RW</p>
+              <h3 className="font-semibold mb-1">Location</h3>
+              <p className="text-sm">9a Great Central Road, Loughborough, England, LE11 1RW</p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#C9A84C] to-[#A7862C] rounded-xl p-5 flex gap-4 items-center shadow-xl">
+          <div className="rounded-2xl border border-[#E6D39C] bg-white p-5 flex gap-4 items-center shadow-lg">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C8A950] to-[#b89840] flex items-center justify-center text-black">
               <Phone size={24} />
             </div>
             <div>
-              <h3 className="font-semibold text-[#C8A950] mb-1">Phone</h3>
-              <a href="tel:+447850053653" className="text-gray-300 hover:text-white transition-colors">07850 053653</a>
+              <h3 className="font-semibold mb-1">Phone</h3>
+              <a href="tel:+447850053653" className="text-[#2C2C2C] hover:text-[#A7862C] transition-colors">07850 053653</a>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#C9A84C] to-[#A7862C] rounded-xl p-5 flex gap-4 items-center shadow-xl">
+          <div className="rounded-2xl border border-[#E6D39C] bg-white p-5 flex gap-4 items-center shadow-lg">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C8A950] to-[#b89840] flex items-center justify-center text-black">
               <Mail size={24} />
             </div>
             <div>
-              <h3 className="font-semibold text-[#C8A950] mb-1">Email</h3>
-              <a href="mailto:samochaihouse@gmail.com" className="text-gray-300 hover:text-white transition-colors text-sm">samochaihouse@gmail.com</a>
+              <h3 className="font-semibold mb-1">Email</h3>
+              <a href="mailto:samochaihouse@gmail.com" className="text-[#2C2C2C] hover:text-[#A7862C] transition-colors text-sm">samochaihouse@gmail.com</a>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#C9A84C] to-[#A7862C] rounded-xl p-5 flex gap-4 items-start shadow-xl">
+          <div className="rounded-2xl border border-[#E6D39C] bg-white p-5 flex gap-4 items-start shadow-lg">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C8A950] to-[#b89840] flex items-center justify-center text-black flex-shrink-0">
               <Clock size={24} />
             </div>
             <div>
-              <h3 className="font-semibold text-[#C8A950] mb-2">Hours</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <h3 className="font-semibold mb-2">Hours</h3>
+              <p className="text-sm leading-relaxed">
                 Monday – Thursday: 9 AM – 5 PM <br />
                 Friday: 9 AM – 4:30 PM <br />
                 Saturday : 11 AM – 3 PM <br />

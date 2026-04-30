@@ -77,7 +77,7 @@ export default function ChaiSection() {
     };
 
     return (
-        <div className="bg-[#C9A84C] px-4 py-20 relative overflow-hidden">
+        <div className="bg-[#F4EDDD] px-4 py-20 relative overflow-hidden">
             <h2
                 className="text-center text-4xl md:text-6xl font-bold mb-6 tracking-wide text-black relative z-10"
                 data-aos="fade-up"
@@ -131,7 +131,7 @@ export default function ChaiSection() {
             <div className="flex flex-col xl:flex-row justify-center items-center gap-10 relative z-10">
                 {/* Left Text with Enhanced Effects */}
                 <div
-                    className="relative max-w-md ml-5 border-3 border-black shadow-lg bg-white p-6 group transform transition-all duration-700 hover:scale-105 hover:shadow-2xl"
+                    className="relative max-w-md ml-5 border-3 border-[#E5D4A0] shadow-lg bg-white p-6 group transform transition-all duration-700 hover:scale-105 hover:shadow-2xl"
                     style={{
                         transform: `perspective(1000px) rotateY(${mousePosition.x * 0.1}deg) rotateX(${mousePosition.y * 0.1}deg)`
                     }}
@@ -177,7 +177,7 @@ export default function ChaiSection() {
                         ref={scrollRef}
                         className="flex gap-4 overflow-x-scroll scroll-smooth no-scrollbar px-2 border-3 p-5 pl-5 relative transform transition-all duration-700 hover:shadow-2xl"
                         style={{
-                            boxShadow: isVisible ? '0 25px 50px -12px rgba(34, 197, 94, 0.25)' : 'none'
+                            boxShadow: isVisible ? '0 25px 50px -12px rgba(201, 168, 76, 0.22)' : 'none'
                         }}
                     >
                         {/* Animated background wave */}
@@ -242,7 +242,7 @@ export default function ChaiSection() {
 
                                 {/* Enhanced label */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-black/20 text-white text-center py-3 transform transition-all duration-300 group-hover/card:from-[#C9A84C]/90 group-hover/card:to-[#C9A84C]/30">
-                                    <h3 className="text-lg sm:text-xl font-bold transform transition-all duration-300 group-hover/card:scale-110">
+                                    <h3 className="text-lg sm:text-xl font-bold text-white transform transition-all duration-300 group-hover/card:scale-110">
                                         {item.name}
                                     </h3>
 

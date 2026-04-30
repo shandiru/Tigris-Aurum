@@ -2,6 +2,9 @@
 
 :root {
   --brand-primary: #C9A84C;
+  --brand-deep: #A7862C;
+  --surface: #FCFAF5;
+  --surface-alt: #F4EDDD;
   --heading-color: #1A1A1A;
   --body-color: #2C2C2C;
 }
@@ -10,21 +13,27 @@ html, body {
   width: 100%;
   overflow-x: hidden; 
   scroll-behavior: smooth;
+  background: var(--surface);
+  color: var(--body-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color) !important;
+  color: var(--heading-color);
 }
 
 p {
-  color: var(--body-color) !important;
+  color: var(--body-color);
 }
 
 h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
-  color: inherit !important;
+  color: inherit;
 }
 
 p * {
+  color: inherit;
+}
+
+a {
   color: inherit;
 }
 

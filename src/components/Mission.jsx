@@ -57,7 +57,7 @@ const Mission = () => {
             <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center z-10">
                 {/* Left Section - Tabs */}
                 <div className="flex-1 max-w-2xl" data-aos="fade-right">
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8">
+                    <h2 className="text-3xl md:text-5xl font-extrabold mb-8">
                         SAVOR THE <span className="text-[#C9A84C]">FLAVOR</span>,<br /> ONE SIP AT A TIME.
                     </h2>
 
@@ -67,7 +67,7 @@ const Mission = () => {
                                 <button
                                     className={`w-full flex items-center justify-between px-4 py-3 rounded-md font-bold text-lg transition-all duration-300
                     ${activeTab === tab.id
-                                            ? "bg-[#C9A84C] text-white shadow-lg hover:shadow-xl hover:scale-[1.02]"
+                                            ? "bg-[#C9A84C] text-[#1A1A1A] shadow-lg hover:shadow-xl hover:scale-[1.02]"
                                             : "bg-transparent text-gray-800 border-b hover:bg-gray-100 hover:shadow-md hover:scale-[1.01]"
                                         }`}
                                     onClick={() => setActiveTab(tab.id)}
@@ -79,7 +79,7 @@ const Mission = () => {
                                 {/* Show Content when Active */}
                                 {activeTab === tab.id && (
                                     <div 
-                                        className="mt-2 p-4 bg-gray-900 text-white rounded-b-md shadow-md hover:shadow-[0_8px_24px_rgba(201,168,76,0.3)] transition-all duration-300"
+                                        className="mt-2 p-4 bg-[#FCFAF5] rounded-b-md shadow-md border border-[#E8DAB0] hover:shadow-[0_8px_24px_rgba(201,168,76,0.2)] transition-all duration-300"
                                         data-aos="fade-down"
                                         data-aos-duration="500"
                                     >
@@ -97,7 +97,7 @@ const Mission = () => {
 
                 {/* Right Section - Green Box with Image */}
                 <div className="relative z-10" data-aos="fade-left">
-                    <div className="bg-[#C9A84C] rounded-2xl p-8 sm:p-18 text-white relative overflow-hidden min-h-[340px] pr-28 md:pr-32 shadow-lg hover:shadow-[0_12px_32px_rgba(201,168,76,0.4)] transition-all duration-500 hover:scale-[1.02] group">
+                    <div className="bg-white border border-[#E6D39C] rounded-2xl p-8 sm:p-18 relative overflow-hidden min-h-[340px] pr-28 md:pr-32 shadow-lg hover:shadow-[0_12px_32px_rgba(201,168,76,0.24)] transition-all duration-500 hover:scale-[1.02] group">
                         {/* Animated linear overlay */}
                         <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
 
@@ -107,11 +107,11 @@ const Mission = () => {
                         </h3>
 
                         <div className="space-y-3 mb-6 relative z-10">
-                            <div className="flex items-center gap-2 bg-black px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            <div className="flex items-center gap-2 bg-[#F4EDDD] px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <FaCheck className="text-[#C9A84C]" />
                                 Organic & fresh Coffee
                             </div>
-                            <div className="flex items-center gap-2 bg-black px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            <div className="flex items-center gap-2 bg-[#F4EDDD] px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <FaCheck className="text-[#C9A84C]" />
                                 Premium Coffee
                             </div>

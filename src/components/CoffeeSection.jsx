@@ -318,16 +318,16 @@ export default function CoffeeSection() {
         }
       `}</style>
 
-      <section className="bg-[#C9A84C] py-10 px-6 md:px-12 lg:px-24 section-bg">
+      <section className="bg-[#F4EDDD] py-10 px-6 md:px-12 lg:px-24 section-bg">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center relative z-10">
 
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left" data-aos="fade-right">
             <h1 className="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-6">
               FUELING YOUR DAY<br />
-              THE <span className="text-[#C8A950]">GREEN</span> WAY.
+              THE <span className="text-[#C8A950]">PREMIUM</span> WAY.
             </h1>
-            <p className="text-white text-base mb-8 max-w-lg mx-auto lg:mx-0" data-aos="fade-up">
+            <p className="text-base mb-8 max-w-lg mx-auto lg:mx-0" data-aos="fade-up">
               Sip into serenity with the vibrant energy of matcha. Packed with antioxidants to power your mind and body.
             </p>
           </div>
@@ -357,8 +357,8 @@ export default function CoffeeSection() {
                 <Coffee size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white">PREMIUM MATCHA</h3>
-                <p className="text-white text-sm mt-1 max-w-xs">
+                <h3 className="text-lg font-semibold">PREMIUM MATCHA</h3>
+                <p className="text-sm mt-1 max-w-xs">
                   Handpicked leaves stone-ground to perfection — for a smooth, rich, and earthy experience.
                 </p>
               </div>
@@ -369,8 +369,8 @@ export default function CoffeeSection() {
                 <CupSoda size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white">ORIGINAL BLEND</h3>
-                <p className="text-white text-sm mt-1 max-w-xs">
+                <h3 className="text-lg font-semibold">ORIGINAL BLEND</h3>
+                <p className="text-sm mt-1 max-w-xs">
                   Crafted with care to deliver calm focus and lasting energy - the natural way.
                 </p>
               </div>

@@ -20,12 +20,12 @@ const MenuDisplay = () => {
   return (
     <div
       id="menu"
-      className="w-full min-h-screen flex flex-col scroll-m-10 items-center justify-center bg-zinc-900 bg-cover bg-center bg-no-repeat p-4 md:p-10"
+      className="w-full min-h-screen flex flex-col scroll-m-10 items-center justify-center bg-[#F4EDDD] bg-cover bg-center bg-no-repeat p-4 md:p-10"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/menubg.jpg')`,
+        backgroundImage: `linear-gradient(rgba(252,250,245,0.9), rgba(244,237,221,0.88)), url('/menubg.jpg')`,
       }}
     >
-      <h1 className="text-white text-3xl md:text-5xl font-light mb-8 md:mb-12 uppercase tracking-widest text-center">
+      <h1 className="text-3xl md:text-5xl font-light mb-8 md:mb-12 uppercase tracking-widest text-center">
         Our Menu
       </h1>
 
@@ -39,7 +39,7 @@ const MenuDisplay = () => {
             className={`px-3 py-2 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 flex-shrink-0 ${
               activeIndex === idx
                 ? "bg-[#C8A950] text-black font-bold"
-                : "bg-white/20 text-white hover:bg-white/30"
+                : "bg-white/75 text-[#1A1A1A] hover:bg-white"
             }`}
           >
             {cat}
@@ -54,7 +54,7 @@ const MenuDisplay = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={handlePrev}
-            className="p-4 rounded-full bg-white/20 hover:bg-[#C8A950] text-white transition-all border border-white/20"
+            className="p-4 rounded-full bg-white/80 hover:bg-[#C8A950] text-[#1A1A1A] transition-all border border-[#E5D5A3]"
           >
             <ChevronUp size={32} />
           </motion.button>
@@ -123,8 +123,8 @@ const MenuDisplay = () => {
               whileHover={{ scale: 1.05 }}
               className={`text-sm uppercase tracking-wider transition-all duration-300 ${
                 activeIndex === idx
-                  ? "text-white font-bold translate-x-2"
-                  : "text-white/40 hover:text-[#C8A950]"
+                  ? "text-[#1A1A1A] font-bold translate-x-2"
+                  : "text-[#1A1A1A]/45 hover:text-[#C8A950]"
               }`}
             >
               {cat}
