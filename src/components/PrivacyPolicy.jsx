@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-gray-700">
-                        <p><strong>SAMOCHAI</strong></p>
-                        <p>Email: <a href="mailto:samochaihouse@gmail.com" className="text-black font-semibold hover:underline">samochaihouse@gmail.com</a></p>
-                        <p>Phone: 07850 053653</p>
-                        <p>Address: 9a Great Central Road, Loughborough, England, LE11 1RW</p>
+                        <p><strong>Tigris Aurum</strong></p>
+                        <p>Email: <a href="mailto:tigrisaurum@gmail.com" className="text-black font-semibold hover:underline">tigrisaurum@gmail.com</a></p>
+                        <p>Phone: 077000000</p>
+                        <p>Address: Our Location</p>
                     </div>
                     <p className="mt-2 text-gray-700">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}

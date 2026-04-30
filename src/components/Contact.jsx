@@ -51,7 +51,7 @@ const Contact = () => {
       <div className={`text-center mb-10 relative z-10 transition-all duration-1000 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h2 className="text-4xl md:text-6xl font-bold mb-4 text-black">Order & Get In Touch</h2>
         <p className="text-sm md:text-lg text-gray-700 font-semibold max-w-xl mx-auto">
-          Place your order or send us a message via WhatsApp!
+          Place your order or send us a message via WhatsApp.
         </p>
       </div>
 
@@ -158,7 +158,7 @@ const Contact = () => {
           />
 
           <button
-            onClick={() => handleSubmit("+447955363123")}
+            onClick={() => handleSubmit("44770000000")}
             className="w-full bg-gradient-to-r from-[#C8A950] to-[#b89840] text-black font-bold py-3 rounded-lg hover:scale-[1.02] transition-all text-lg shadow-lg"
           >
             Send Order via WhatsApp
@@ -176,7 +176,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-semibold mb-1">Location</h3>
-              <p className="text-sm">9a Great Central Road, Loughborough, England, LE11 1RW</p>
+              <p className="text-sm">Our Location</p>
             </div>
           </div>
 
@@ -186,7 +186,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-semibold mb-1">Phone</h3>
-              <a href="tel:+447850053653" className="text-[#2C2C2C] hover:text-[#A7862C] transition-colors">07850 053653</a>
+              <a href="tel:077000000" className="text-[#2C2C2C] hover:text-[#A7862C] transition-colors">077000000</a>
             </div>
           </div>
 
@@ -196,7 +196,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="font-semibold mb-1">Email</h3>
-              <a href="mailto:samochaihouse@gmail.com" className="text-[#2C2C2C] hover:text-[#A7862C] transition-colors text-sm">samochaihouse@gmail.com</a>
+              <a href="mailto:tigrisaurum@gmail.com" className="text-[#2C2C2C] hover:text-[#A7862C] transition-colors text-sm">tigrisaurum@gmail.com</a>
             </div>
           </div>
 
@@ -221,10 +221,10 @@ const Contact = () => {
       <div className={`max-w-7xl mx-auto mt-12 rounded-xl overflow-hidden shadow-2xl transition-all duration-1000 delay-500 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <iframe
           className="w-full h-96 border-4 border-[#C9A84C]"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2414.773641243165!2d-1.2062534!3d52.7547703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879e606a2000001%3A0x6d90000000000000!2s9a%20Great%20Central%20Rd%2C%20Loughborough%20LE11%201RW!5e0!3m2!1sen!2suk!4v1700000000000"
+          src="https://www.google.com/maps?q=Stamford,England&output=embed"
           allowFullScreen
           loading="lazy"
-          title="Samochai Location Map"
+          title="Tigris Aurum Location Map"
         ></iframe>
       </div>
     </div>

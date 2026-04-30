@@ -276,7 +276,7 @@ export const allItems = [
     {
         title: "Gulap Jam Milkshake",
         price: "£3.50",
-        desc: "Chilled milkshake with gulab jamun, a house special for a sweet, creamy experience.",
+        desc: "Chilled milkshake with gulab jamun, a  special for a sweet, creamy experience.",
         category: "Mishti Milkshakes",
         image: "/Gulap Jam Milkshake.png",
     },
@@ -288,7 +288,7 @@ export const allItems = [
         image: "/Kala Jam Milkshake.png",
     },
     {
-        title: "House Special",
+        title: " Special",
         price: "£4.00",
         desc: "Indulge in a creamy milkshake with pistachio and salted caramel, featuring delightful mishti flavors.",
         category: "Mishti Milkshakes",

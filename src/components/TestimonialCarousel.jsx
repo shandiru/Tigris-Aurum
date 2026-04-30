@@ -3,24 +3,24 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
-    text: `Lovely little spot! Straight off the bat, the gentleman behind the counter welcomed us with a big smile. Drinks are lovely, from the warming chai latte through to smooth karak coffee. Breakfast omelette was also a great choice. Briefly speaking to the owner, you can tell they care about the customer service and the best ingredients. Only downside is that I am not more local to this business, otherwise I’d certainly be back again. Cheers guys!`,
-    name: 'Patrycja Flontowicz',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`,
+    name: "Customer One",
   },
   {
-    text: `Lovely home brewed karak chai, nothing from a sachet. Samosa's handmade, full of flavour, not too spicy. Good quality, clean and great prices. What more can you ask for? Our experience was 10 out of 10, plus 10, minus nothing !`,
-    name: 'Karam Kaur',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    name: "Customer Two",
   },
   {
-    text: `Perfect A very warm welcome when we arrived today. Very chatty and friendly. Food quality is outstanding and we passed on our compliments from our last order. Can recommend the mango and passionfruit twist, chicken burger, samosas, sheesh pita and white choc cookie. Will be back for more!!!!`,
-    name: 'Claire Moseley',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+    name: "Customer Three",
   },
   {
-    text: `Used Samochai for the first time on 'Foody Friday' for the office. Everyone agreed the food was excellent and great value. The homemade Chicken Burgers were particularly good and Naz and his team are super friendly. Highly recommended.`,
-    name: 'David Newcombe',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    name: "Customer Four",
   },
   {
-    text: `The food was finger licking good, was drooling for seconds. I had the omelette wrap with beef rashers and extra masala. It was out of this world. I also had the sheekh egg roll, I have to admit both were absolutely delicious with the intricacy of spices and oomph to it. But the milkshake, I loved it, sends nostalgic vibes through memory lane. The first sip to the last, it was everlasting. Taking in to consideration, I’ve tried it for the first time. I will definitely come back again BUT I need to try the rest of the menu too.`,
-    name: 'Rayyan Al-Muneem',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam.`,
+    name: "Customer Five",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function TestimonialCarousel() {
   return (
     <section className="py-12 bg-white relative overflow-hidden">
 
-      {/* ✅ Dotted Background */}
+      {/* âœ… Dotted Background */}
       <div
         className="absolute inset-0 bg-[radial-linear(#C9A84C_2px,transparent_2px)] [background-size:20px_20px] z-0"
         style={{
@@ -135,7 +135,7 @@ export default function TestimonialCarousel() {
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-lg">★</span>
+                    <span key={i} className="text-yellow-400 text-lg">â˜…</span>
                   ))}
                 </div>
 

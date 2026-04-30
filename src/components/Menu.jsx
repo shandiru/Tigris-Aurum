@@ -39,7 +39,7 @@ const Menu = () => {
           Menu
         </h2>
         <p data-aos="fade-up" className="mt-2">
-          Discover the authentic taste of Sylhet street food
+          Explore the signature selection from Tigris Aurum
         </p>
       </div>
 

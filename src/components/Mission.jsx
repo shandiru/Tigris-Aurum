@@ -85,8 +85,8 @@ const Mission = () => {
                                     >
                                         <p>
                                             {tab.id === "mission"
-                                                ? "We are dedicated to serving the best chai in town, brewed with care and tradition, paired with vibrant street food that delights the senses. Our mission is to create a welcoming space where people can gather, share stories, and experience the rich aromas, flavors, and culture that chai has always represented."
-                                                : "To become the most loved destination for chai and street food, where every sip and every bite brings people closer to the warmth, aroma, and joy of authentic flavors."}
+                                                ? "Our mission is to make Tigris Aurum a welcoming destination for quality drinks, satisfying food, and meaningful moments shared in a relaxed setting."
+                                                : "Our vision is to grow Tigris Aurum into a recognizable name for warm hospitality, distinctive flavor, and an experience guests look forward to returning to."}
                                         </p>
                                     </div>
                                 )}
@@ -102,25 +102,25 @@ const Mission = () => {
                         <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
 
                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 leading-snug relative z-10">
-                            BREWED WITH LOVE, <br />
-                            SERVED WITH A SMILE
+                            MADE WITH CARE, <br />
+                            SHARED WITH STYLE
                         </h3>
 
                         <div className="space-y-3 mb-6 relative z-10">
                             <div className="flex items-center gap-2 bg-[#F4EDDD] px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <FaCheck className="text-[#C9A84C]" />
-                                Organic & fresh Coffee
+                                Signature drinks
                             </div>
                             <div className="flex items-center gap-2 bg-[#F4EDDD] px-4 py-2 rounded-full text-sm w-fit shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
                                 <FaCheck className="text-[#C9A84C]" />
-                                Premium Coffee
+                                Freshly prepared bites
                             </div>
                         </div>
 
                         <p className="font-medium text-sm mb-2 relative z-10">SOCIAL MEDIA</p>
                         <div className="flex gap-3 mb-4 relative z-10">
                             <a
-                                href="https://www.instagram.com/samochaihouse/"
+                                href="https://www.instagram.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-white text-black p-2 rounded-full hover:text-pink-600 hover:shadow-md hover:scale-110 transition-all duration-300"

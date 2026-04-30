@@ -7,21 +7,21 @@ export default function WhatWeOffer() {
     const services = [
         {
             video: "/s1.mp4",
-            title: "Authentic Sylheti Street-Food Roots",
+            title: "A Distinctive Tigris Aurum Experience",
             description:
-                "Born from the vibrant tea stalls and street-food culture of Sylhet, bringing real flavours, real warmth, and real community to every cup and bite.",
+                "Tigris Aurum brings together comforting drinks, satisfying food, and a welcoming atmosphere designed for everyday moments worth savoring.",
         },
         {
             video: "/s2.mp4",
-            title: "Chai Crafted From the Heartland of Tea",
+            title: "Signature Sips With Lasting Flavor",
             description:
-                "Sylhet grows most of Bangladesh's tea — and that rich, aromatic heritage is poured directly into every cup you sip at SAMOCHAI.",
+                "From creamy coffees to aromatic chai, every drink is prepared to feel smooth, memorable, and easy to come back for.",
         },
         {
             video: "/s3.mp4",
-            title: "Tradition Served With Modern Comfort",
+            title: "Comfort Food, Refined Identity",
             description:
-                "We blend the soul of Sylheti street flavours with a modern twist, giving you nostalgia, culture, and comfort in every visit.",
+                "Our menu balances familiar comfort with polished presentation so every visit feels casual, inviting, and unmistakably Tigris Aurum.",
         },
     ];
 
@@ -60,11 +60,11 @@ export default function WhatWeOffer() {
                 </span>
 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[#111111] px-2">
-                    Why We're the Best in Street Food & Chai
+                    Why Tigris Aurum Stands Out
                 </h2>
 
                 <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-12 md:mb-14 text-[#333333] px-2">
-                    Born in the heart of Sylhet lively streets, SAMOCHAI isn't just a restaurant - it's a true reflection of the city's street food and chai culture.
+                    Tigris Aurum is built around quality drinks, flavorful food, and a setting that makes every visit feel easy, warm, and memorable.
                 </p>
 
                 {/* Card Slider */}
@@ -118,14 +118,14 @@ export default function WhatWeOffer() {
                         aria-label="Previous slide"
                         className="absolute left-2 sm:left-4 md:left-6 mt-100 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md text-base sm:text-lg font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-white text-black bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center"
                     >
-                        ‹
+                        â€¹
                     </button>
                     <button
                         onClick={() => setActiveIndex((prev) => (prev + 1) % services.length)}
                         aria-label="Next slide"
                         className="absolute right-2 sm:right-4 md:right-6 mt-100 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md text-base sm:text-lg font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-white text-black bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center"
                     >
-                        ›
+                        â€º
                     </button>
                 </div>
 

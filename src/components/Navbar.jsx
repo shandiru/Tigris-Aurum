@@ -20,11 +20,10 @@ const Navbar = () => {
         <div className="flex items-center">
           <img
             src="/logo.png"
-            alt="Chai House Logo"
+            alt="tigrisaurumLogo"
             className="w-55 h-8 object-contain"
             loading="lazy"
           />
-          <div className="text-sm italic">Chai House</div>
         </div>
 
         {/* Desktop Navigation */}
@@ -46,7 +45,7 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#contact"
-            className="flex items-center gap-2 bg-white text-[#1A1A1A] px-5 py-2 rounded-md font-semibold shadow hover:bg-[#E8D28A] hover:text-black transition"
+            className="flex items-center gap-2 bg-white text-[#C9A84C]! px-5 py-2 rounded-md font-semibold shadow hover:bg-[#E8D28A] hover:text-black! transition"
           >
             <FiShoppingCart />
             Order Now

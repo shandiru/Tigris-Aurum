@@ -9,17 +9,17 @@ const HeroSection = () => {
         {/* LEFT CONTENT */}
         <div className="relative z-10 text-center lg:text-left">
           <div className="inline-flex items-center rounded-full border border-[#D7C48C] bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-[#A7862C] shadow-sm">
-            Samochai House
+            Tigris Aurum
           </div>
 
           <h1 className="mt-5 text-3xl italic sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Samosa and Chai <br className="hidden sm:block" />
-            for every occasion
+            Tigris Aurum <br className="hidden sm:block" />
+            crafted for every occasion
           </h1>
 
           <p className="max-w-xl mx-auto lg:mx-0 mb-8 text-base sm:text-lg">
-            Samochai brings the vibrant, authentic flavors of Bangladeshi street
-            food straight to you. Freshly made, perfectly spiced, unforgettable taste.
+            Tigris Aurum serves a warm mix of handcrafted chai, bold signature drinks,
+            and satisfying bites made for relaxed catchups, quick stops, and special moments.
           </p>
 
           <a href="#menu">

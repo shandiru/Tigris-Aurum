@@ -83,7 +83,7 @@ export default function ChaiSection() {
                 data-aos="fade-up"
             >
                 <span className="inline-block mb-3 text-[#C8A950]">
-                    Sylhet Tea Gardens
+                    Tigris Aurum Signature Brews
                 </span>
             </h2>
             <style>
@@ -113,7 +113,7 @@ export default function ChaiSection() {
                 `}
             </style>
 
-            {/* 🔹 Dotted background pattern */}
+            {/* ðŸ”¹ Dotted background pattern */}
             <div
                 className="absolute inset-0 bg-[radial-linear(#E8D28A_2px,transparent_2px)] [background-size:20px_20px]"
                 style={{
@@ -151,9 +151,9 @@ export default function ChaiSection() {
 
                     <div className="absolute -left-2 -top-2 w-full h-full -z-10" />
                     <p className="text-black font-medium text-base leading-relaxed relative z-10  transition-colors duration-300">
-                        Sylhet  is where Bangladesh’s tea magic comes to life. Wander through endless green hills, watch skilled hands pluck the
-                        freshest leaves, and soak in views that feel like a dream. Whether you love adventure, culture, or simply a great cup of
-                        tea, these vibrant tea estates are packed with charm, discovery, and unforgettable moments.
+                        Tigris Aurum is all about warm pours, inviting flavors, and drinks that turn simple visits into memorable moments.
+                        From comforting classics to richer signature picks, every cup is part of an experience designed to feel smooth,
+                        relaxed, and easy to return to.
                     </p>
 
                     {/* Animated borders */}

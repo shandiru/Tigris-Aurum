@@ -26,7 +26,7 @@ const TermsConditions = () => {
         <section>
           <h2 className="text-2xl font-medium">3. Intellectual Property</h2>
           <p className="text-gray-700">
-            All content on this website (including text, images, graphics, and logos) is owned by or licensed to SAMOCHAI.
+            All content on this website (including text, images, graphics, and logos) is owned by or licensed to Tigris Aurum.
             You may view, download, and print content for personal use only.
             You must not copy, reproduce, or distribute our website content without prior written consent.
           </p>
@@ -75,10 +75,10 @@ const TermsConditions = () => {
             If you have any questions about these Terms of Use, please contact us:
           </p>
           <div className="text-gray-700">
-            <p><strong>SAMOCHAI</strong></p>
-            <p>Email: <a href="mailto:samochaihouse@gmail.com" className="text-black font-semibold hover:underline">samochaihouse@gmail.com</a></p>
-            <p>Phone: 07850 053653</p>
-            <p>Address: 9a Great Central Road, Loughborough, England, LE11 1RW</p>
+            <p><strong>Tigris Aurum</strong></p>
+            <p>Email: <a href="mailto:tigrisaurum@gmail.com" className="text-black font-semibold hover:underline">tigrisaurum@gmail.com</a></p>
+            <p>Phone: 077000000</p>
+            <p>Address: Our Location</p>
           </div>
         </section>
       </div>

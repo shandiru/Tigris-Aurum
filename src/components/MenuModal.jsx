@@ -85,7 +85,7 @@ const MenuModal = ({ isOpen, onClose }) => {
               className="w-full h-48 md:h-60 object-cover"
             />
             <div className="absolute top-0 left-0 w-full bg-white/70 backdrop-blur-sm flex justify-between items-center px-4 py-3">
-              <h1 className="text-lg font-bold text-gray-800 tracking-wider">SAMOCHAI</h1>
+              <h1 className="text-lg font-bold text-gray-800 tracking-wider">Tigris Aurum</h1>
               <div className="flex items-center gap-4 text-gray-700 text-xl">
                 <FiMenu className="hover:text-[#1A1A1A] cursor-pointer" />
                 <FiInfo className="hover:text-[#1A1A1A] cursor-pointer" />

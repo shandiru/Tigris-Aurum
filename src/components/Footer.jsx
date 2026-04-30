@@ -17,14 +17,13 @@ const Footer = () => {
               loading="lazy"
               alt="logo"
             />
-             <div className="italic text-sm">Chai House</div>
           </div>
           <p className="text-md font-semibold mb-4">
-            Samosa and Chai for every occasion
+            Signature drinks and flavorful bites for every occasion
           </p>
           <div className="flex space-x-4">
             <a
-              href="https://www.instagram.com/samochaihouse/"
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pink-500"
@@ -66,27 +65,27 @@ const Footer = () => {
             <li className="flex items-start gap-4">
               <FiMapPin className="mt-3 text-[#A7862C] text-2xl" />
               <a
-                href="https://maps.app.goo.gl/UjXrLfUgafhjnzmQ6"
+                href="https://maps.google.com/?q=Stamford,England"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#A7862C]"
               >
-                9a Great Central Road, Loughborough, England, LE11 1RW
+                Our Location
               </a>
             </li>
             <li className="flex items-center gap-4">
               <FiPhone className="text-[#A7862C]" />
-              <a href="tel:+447850053653" className="hover:text-[#A7862C]">
-                07850 053653
+              <a href="tel:077000000" className="hover:text-[#A7862C]">
+                077000000
               </a>
             </li>
             <li className="flex items-center gap-4">
               <FiMail className="text-[#A7862C] text-xl" />
               <a
-                href="mailto:samochaihouse@gmail.com"
+                href="mailto:tigrisaurum@gmail.com"
                 className="hover:text-[#A7862C] text-lg md:text-base lg:text-lg"
               >
-                samochaihouse@gmail.com
+                tigrisaurum@gmail.com
               </a>
             </li>
           </ul>
@@ -96,7 +95,7 @@ const Footer = () => {
       <hr className="my-3 mt-8 border-[#E6D39C]" />
 
       <div className="text-center font-bold">
-        <p>&copy; {new Date().getFullYear()} SAMOCHAI. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Tigris Aurum. All rights reserved.</p>
       </div>
 
       {/* Bottom Bar */}
