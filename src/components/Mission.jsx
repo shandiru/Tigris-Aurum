@@ -132,7 +132,7 @@ const Mission = () => {
 
                     {/* COFFEE CUP IMAGE OUTSIDE CARD */}
                     <img
-                        src="/new2.png"
+                        src="/cup.png"
                         loading="lazy"
                         alt="Coffee Cup"
                         className="absolute left-[180px] md:left-[260px] bottom-[-0px] md:bottom-[-10px] w-[130px] md:w-[200px] z-20 hover:rotate-12 hover:scale-110 active:rotate-12 active:scale-110 transition-all duration-500 drop-shadow-xl"

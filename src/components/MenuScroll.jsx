@@ -2,22 +2,22 @@ import React, { useRef, useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
 const topImages = [
-  "/House Special.png",
-  "/hashbrown.png",
-  "/Fruit n nut.png",
-  "/choc.png",
-  "/Sausage.png",
-  "/Samosas.png",
+  "/im1.png",
+  "/im2.png",
+  "/im3.png",
+  "/im4.png",
+  "/im5.png",
+  "/im6.png",
 ];
 
 const bottomImages = [
-  "/Chicken.png",
-  "/croissant.png",
-  "/masala.png",
-  "/Pepperoni and Cheese.png",
-  "/Pepperoni.png",
-  "/Salmon.png",
-  "/tuna.png",
+  "/im7.png",
+  "/im8.png",
+  "/im9.png",
+  "/im10.png",
+  "/im11.png",
+  "/im12.png",
+  "/im13.png",
 ];
 
 const MenuScroll = () => {

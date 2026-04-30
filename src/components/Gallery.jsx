@@ -1,16 +1,16 @@
 import React from 'react';
 
 const images = [
-  '/g2.jpg',
-  '/g3.jpg',
-  '/g4.jpg',
-  '/g5.jpg',
-  '/g6.jpg',
-  '/g18.jpg',
-  '/g8.jpg',
-  '/g9.jpg',
-  '/Samosas.png',
-  '/tea.jpeg',
+  '/im1.png',
+  '/im2.png',
+  '/im3.png',
+  '/im4.png',
+  '/im5.png',
+  '/im6.png',
+  '/im7.png',
+  '/im8.png',
+  '/im9.png',
+  '/im10.png',
 ];
 
 

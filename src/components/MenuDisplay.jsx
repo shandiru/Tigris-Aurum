@@ -1,139 +1,150 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronUp, ChevronDown } from "lucide-react";
-import { categories, allItems } from "./MenuData"; // Path to your MenuData
+import React, { useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const MenuDisplay = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const testimonials = [
+  {
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`,
+    name: "Customer One",
+  },
+  {
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    name: "Customer Two",
+  },
+  {
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+    name: "Customer Three",
+  },
+  {
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    name: "Customer Four",
+  },
+  {
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam.`,
+    name: "Customer Five",
+  },
+];
 
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % categories.length);
+export default function TestimonialCarousel() {
+  const scrollRef = useRef(null);
+
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (current) {
+      // Find the width of a single card to scroll accurately
+      const card = current.querySelector(".testimonial-card");
+      const cardWidth = card ? card.offsetWidth + 24 : current.offsetWidth; // 24 is the space-x-6 gap
+      
+      current.scrollBy({
+        left: direction === "left" ? -cardWidth : cardWidth,
+        behavior: "smooth",
+      });
+    }
   };
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + categories.length) % categories.length);
-  };
-
-  const currentCategory = categories[activeIndex];
-  const currentItems = allItems.filter((item) => item.category === currentCategory);
 
   return (
-    <div
-      id="menu"
-      className="w-full min-h-screen flex flex-col scroll-m-10 items-center justify-center bg-[#F4EDDD] bg-cover bg-center bg-no-repeat p-4 md:p-10"
-      style={{
-        backgroundImage: `linear-gradient(rgba(252,250,245,0.9), rgba(244,237,221,0.88)), url('/menubg.jpg')`,
-      }}
-    >
-      <h1 className="text-3xl md:text-5xl font-light mb-8 md:mb-12 uppercase tracking-widest text-center">
-        The <span className="text-[#C9A84C]!">Tigris  Aurum</span> Collection
-      </h1>
+    <section className="py-12 bg-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "radial-gradient(#C9A84C 2px, transparent 2px)",
+          backgroundSize: "20px 20px",
+          WebkitMaskImage: "linear-gradient(135deg, black 0%, transparent 40%, transparent 60%, black 100%)",
+          maskImage: "linear-gradient(135deg, black 0%, transparent 40%, transparent 60%, black 100%)",
+        }}
+      />
 
-      {/* CATEGORY TABS - Mobile only */}
-      <div className="flex lg:hidden w-full max-w-lg mb-6 gap-2 px-4 flex-wrap justify-center">
-        {categories.map((cat, idx) => (
-          <motion.button
-            key={cat}
-            onClick={() => setActiveIndex(idx)}
-            whileTap={{ scale: 0.95 }}
-            className={`px-3 py-2 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 flex-shrink-0 ${
-              activeIndex === idx
-                ? "bg-[#C8A950] text-black font-bold"
-                : "bg-white/75 text-[#1A1A1A] hover:bg-white"
-            }`}
-          >
-            {cat}
-          </motion.button>
-        ))}
-      </div>
+      <style>
+        {`
+          @keyframes pulseSpin {
+            0%   { transform: rotate(0deg) scale(0.8); opacity: 0.2; }
+            40%  { transform: rotate(180deg) scale(1.6); opacity: 1; }
+            70%  { transform: rotate(270deg) scale(1.2); opacity: 0.7; }
+            100% { transform: rotate(360deg) scale(0.8); opacity: 0.2; }
+          }
+          .bg-icon {
+            position: absolute;
+            color: #C9A84C !important;
+            animation: pulseSpin 25s ease-in-out infinite;
+            filter: drop-shadow(0 0 18px rgba(201,168,76,0.8));
+            z-index: 0;
+            pointer-events: none;
+          }
+          .hide-scrollbar::-webkit-scrollbar { display: none; }
+          .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        `}
+      </style>
 
-      <div className="relative w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-        {/* LEFT CONTROLS - Desktop only */}
-        <div className="hidden lg:flex flex-col gap-6">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handlePrev}
-            className="p-4 rounded-full bg-white/80 hover:bg-[#C8A950] text-[#1A1A1A] transition-all border border-[#E5D5A3]"
-          >
-            <ChevronUp size={32} />
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleNext}
-            className="p-4 rounded-full bg-white text-black hover:bg-[#C8A950] transition-all shadow-lg"
-          >
-            <ChevronDown size={32} />
-          </motion.button>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <p className="text-black font-semibold tracking-widest uppercase text-lg">
+            Our <span className="text-[#C9A84C]">Testimonials</span>
+          </p>
         </div>
 
-        {/* MENU CARD */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="relative w-full max-w-lg bg-white shadow-2xl rounded-2xl flex flex-col overflow-hidden"
+        {/* Navigation Buttons */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 pointer-events-none z-20">
+          <button
+            onClick={() => scroll("left")}
+            className="pointer-events-auto bg-[#C9A84C] p-3 rounded-full shadow-md hover:bg-[#E8D28A] hover:text-black text-white transition group"
+          >
+            <FaChevronLeft className="transition-transform duration-300 group-hover:-translate-x-1" size={18} />
+          </button>
+
+          <button
+            onClick={() => scroll("right")}
+            className="pointer-events-auto bg-[#C9A84C] p-3 rounded-full shadow-md hover:bg-[#E8D28A] hover:text-black text-white transition group"
+          >
+            <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" size={18} />
+          </button>
+        </div>
+
+        {/* Scroll Container */}
+        <div
+          ref={scrollRef}
+          className="flex space-x-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-2 py-8 hide-scrollbar"
         >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -30 }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-col p-6 md:p-10 flex-grow"
+          {testimonials.map((t, index) => (
+            <div
+              key={index}
+              className="testimonial-card flex-shrink-0 relative snap-start bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-[#C9A84C] transition-shadow duration-300
+                w-full 
+                md:w-[calc(50%-12px)] 
+                lg:w-[calc(33.333%-16px)]"
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-10 text-zinc-800 border-b pb-3">
-                {currentCategory}
-              </h2>
+              {/* Gold Corner Triangle */}
+              <div className="absolute top-0 left-0 w-0 h-0 border-t-[80px] border-t-[#E8D28A] border-r-[80px] border-r-transparent"></div>
 
-              {/* Scrollbar styled via Tailwind arbitrary values */}
-              <div className="space-y-6 overflow-y-auto max-h-[500px] pr-2 
-                [&::-webkit-scrollbar]:w-[5px] 
-                [&::-webkit-scrollbar-track]:bg-zinc-100 
-                [&::-webkit-scrollbar-thumb]:bg-zinc-300 
-                [&::-webkit-scrollbar-thumb]:rounded-full">
-                {currentItems.map((item, idx) => (
-                  <div key={idx} className="group border-b border-zinc-100 pb-4 last:border-0">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="font-bold text-zinc-900 text-lg group-hover:text-[#C8A950] transition-colors">
-                          {item.title}
-                        </h3>
-                        {/* {item.desc && (
-                          <p className="text-sm text-zinc-500 italic mt-1">{item.desc}</p>
-                        )} */}
-                      </div>
-                      <span className="font-bold text-zinc-900 ml-4">{item.price}</span>
-                    </div>
+              {/* Card Content */}
+              <div className="relative pt-6 px-6 pb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-dashed border-white p-1 bg-[#E8D28A]"></div>
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
 
-        {/* RIGHT SIDEBAR - Desktop only */}
-        <div className="hidden lg:flex flex-col gap-4 items-start w-52">
-          {categories.map((cat, idx) => (
-            <motion.button
-              key={cat}
-              onClick={() => setActiveIndex(idx)}
-              whileHover={{ scale: 1.05 }}
-              className={`text-sm uppercase tracking-wider transition-all duration-300 ${
-                activeIndex === idx
-                  ? "text-[#1A1A1A] font-bold translate-x-2"
-                  : "text-[#1A1A1A]/45 hover:text-[#C8A950]"
-              }`}
-            >
-              {cat}
-            </motion.button>
+                  <div className="flex-1 bg-gray-100 py-3 px-4 rounded-lg">
+                    <h3 className="text-lg font-bold text-gray-900">{t.name}</h3>
+                    <p className="text-gray-600 text-sm">Client</p>
+                  </div>
+                </div>
+
+                {/* Star Rating */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-lg">★</span>
+                  ))}
+                </div>
+
+                {/* Testimonial Text */}
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                  {t.text}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default MenuDisplay;
+}

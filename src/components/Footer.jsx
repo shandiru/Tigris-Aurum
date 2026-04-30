@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-1.5 mb-5">
             <img
-              className="w-35 h-7"
+              className="w-35 h-20"
               src="/logo.png"
               loading="lazy"
               alt="logo"

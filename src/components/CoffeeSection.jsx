@@ -336,14 +336,14 @@ export default function CoffeeSection() {
           <div className="flex-1 flex justify-center my-8 lg:my-0" data-aos="fade-up">
             {/* Mobile Image */}
             <img
-              src="/new1.png"
+              src="/cup.png"
               alt="Coffee Cup"
               loading="lazy"
               className="block lg:hidden w-[200px] md:w-[260px] object-contain glow-image"
             />
             {/* Desktop Image */}
             <img
-              src="/new1.png"
+              src="/cup.png"
               alt="Coffee Cup"
               loading="lazy"
               className="hidden lg:block w-[300px] xl:w-[250px] object-contain glow-image"
@@ -353,7 +353,7 @@ export default function CoffeeSection() {
           {/* Right Features */}
           <div className="flex-1 space-y-8" data-aos="fade-left">
             <div className="feature-card flex items-start gap-4 shadow-lg border-2 border-transparent hover:shadow-[0_0_25px_rgba(201,168,76,0.5)] transition-all">
-              <div className="feature-icon text-white p-3 rounded-full shrink-0">
+              <div className="feature-icon text-[#C9A84C]! p-3 rounded-full shrink-0">
                 <Coffee size={20} />
               </div>
               <div>
@@ -365,7 +365,7 @@ export default function CoffeeSection() {
             </div>
 
             <div className="feature-card flex items-start gap-4 shadow-lg hover:shadow-">
-              <div className="feature-icon text-white p-3 rounded-full shrink-0">
+              <div className="feature-icon text-[#C9A84C]! p-3 rounded-full shrink-0">
                 <CupSoda size={20} />
               </div>
               <div>

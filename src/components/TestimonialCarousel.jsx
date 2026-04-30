@@ -30,30 +30,30 @@ export default function TestimonialCarousel() {
   const scroll = (direction) => {
     const { current } = scrollRef;
     if (current) {
-      const scrollAmount = current.offsetWidth;
-      current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+      // Find the width of a single card to scroll accurately
+      const card = current.querySelector(".testimonial-card");
+      const cardWidth = card ? card.offsetWidth + 24 : current.offsetWidth; // 24 is the space-x-6 gap
+      
+      current.scrollBy({
+        left: direction === "left" ? -cardWidth : cardWidth,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
     <section className="py-12 bg-white relative overflow-hidden">
-
-      {/* âœ… Dotted Background */}
+      {/* Background Pattern */}
       <div
-        className="absolute inset-0 bg-[radial-linear(#C9A84C_2px,transparent_2px)] [background-size:20px_20px] z-0"
+        className="absolute inset-0 z-0"
         style={{
-          WebkitMaskImage:
-            "linear-linear(135deg, black 0%, transparent 40%, transparent 60%, black 100%)",
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskSize: "cover",
-          maskImage:
-            "linear-linear(135deg, black 0%, transparent 40%, transparent 60%, black 100%)",
-          maskRepeat: "no-repeat",
-          maskSize: "cover",
+          backgroundImage: "radial-gradient(#C9A84C 2px, transparent 2px)",
+          backgroundSize: "20px 20px",
+          WebkitMaskImage: "linear-gradient(135deg, black 0%, transparent 40%, transparent 60%, black 100%)",
+          maskImage: "linear-gradient(135deg, black 0%, transparent 40%, transparent 60%, black 100%)",
         }}
       />
 
-      {/* Keyframe Animation Styles */}
       <style>
         {`
           @keyframes pulseSpin {
@@ -70,14 +70,8 @@ export default function TestimonialCarousel() {
             z-index: 0;
             pointer-events: none;
           }
-          @media (max-width: 768px) {
-            .bg-icon {
-              width: 2rem !important;
-              height: 2rem !important;
-              animation-duration: 18s;
-              opacity: 0.15;
-            }
-          }
+          .hide-scrollbar::-webkit-scrollbar { display: none; }
+          .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         `}
       </style>
 
@@ -85,24 +79,26 @@ export default function TestimonialCarousel() {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-black font-semibold tracking-widest uppercase text-lg">
-            Our <span className="text-[#C9A84C]!">Testimonials</span>
+            Our <span className="text-[#C9A84C]">Testimonials</span>
           </p>
         </div>
 
-        {/* Scroll Buttons */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-4 top-1/2 mt-20 -translate-y-1/2 bg-[#C9A84C] p-3 rounded-full shadow-md hover:bg-[#E8D28A] hover:text-black text-white transition z-20 group"
-        >
-          <FaChevronLeft className="transition-transform duration-300 group-hover:-translate-x-1" size={18} />
-        </button>
+        {/* Navigation Buttons */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 pointer-events-none z-20">
+          <button
+            onClick={() => scroll("left")}
+            className="pointer-events-auto bg-[#C9A84C] p-3 rounded-full shadow-md hover:bg-[#E8D28A] hover:text-black text-white transition group"
+          >
+            <FaChevronLeft className="transition-transform duration-300 group-hover:-translate-x-1" size={18} />
+          </button>
 
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-4 top-1/2 mt-20 -translate-y-1/2 bg-[#C9A84C] p-3 rounded-full shadow-md hover:bg-[#E8D28A] hover:text-black text-white transition z-20 group"
-        >
-          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" size={18} />
-        </button>
+          <button
+            onClick={() => scroll("right")}
+            className="pointer-events-auto bg-[#C9A84C] p-3 rounded-full shadow-md hover:bg-[#E8D28A] hover:text-black text-white transition group"
+          >
+            <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" size={18} />
+          </button>
+        </div>
 
         {/* Scroll Container */}
         <div
@@ -112,35 +108,36 @@ export default function TestimonialCarousel() {
           {testimonials.map((t, index) => (
             <div
               key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              className="flex-shrink-0 w-72 sm:w-80 md:w-96 bg-white  rounded-2xl shadow-lg overflow-hidden hover:shadow-[#C9A84C] relative snap-start"
+              className="testimonial-card flex-shrink-0 relative snap-start bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-[#C9A84C] transition-shadow duration-300
+                w-full 
+                md:w-[calc(50%-12px)] 
+                lg:w-[calc(33.333%-16px)]"
             >
-              {/* Red Corner Triangle */}
+              {/* Gold Corner Triangle */}
               <div className="absolute top-0 left-0 w-0 h-0 border-t-[80px] border-t-[#E8D28A] border-r-[80px] border-r-transparent"></div>
 
-              {/* Profile Section */}
+              {/* Card Content */}
               <div className="relative pt-6 px-6 pb-6">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-dashed border-white p-1 bg-[#E8D28A]"></div>
                   </div>
 
-                  <div className="flex-1 bg-gray-100  py-3 px-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-gray-900 ">{t.name}</h3>
-                    <p className="text-gray-600  text-sm">Client</p>
+                  <div className="flex-1 bg-gray-100 py-3 px-4 rounded-lg">
+                    <h3 className="text-lg font-bold text-gray-900">{t.name}</h3>
+                    <p className="text-gray-600 text-sm">Client</p>
                   </div>
                 </div>
 
-                {/* Stars */}
+                {/* Star Rating */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-lg">â˜…</span>
+                    <span key={i} className="text-yellow-400 text-lg">★</span>
                   ))}
                 </div>
 
-                {/* Text */}
-                <p className="text-gray-700  text-sm sm:text-base leading-relaxed">
+                {/* Testimonial Text */}
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                   {t.text}
                 </p>
               </div>
