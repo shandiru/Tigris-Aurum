@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp, ChevronDown } from "lucide-react";
-import { categories, allItems } from "./MenuData"; // Path to your MenuData
+import { categories, allItems } from "./MenuData"; 
 
 const MenuDisplay = () => {
   const [activeIndex, setActiveIndex] = useState(0);
