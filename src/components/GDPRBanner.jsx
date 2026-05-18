@@ -43,13 +43,13 @@ export default function GDPRConsent() {
         <div className="fixed bottom-4 left-4 right-4 md:bottom-6 text-center md:right-6 md:left-auto max-w-full md:max-w-xs p-4 rounded-lg 
                          text-gray-900 shadow-lg z-50 
                       bg-gray-900  transition-colors">
-          <p className="text-sm mb-2 text-center text-white">
+          <p className="text-sm mb-2 text-center text-white!">
             We use cookies to improve your experience.{" "}
           </p>
           <p className="mb-3">
             <Link
               to="/privacy-policy"
-              className="underline text-[#1A1A1A] hover:text-[#C9A84C]"
+              className="underline text-white! hover:text-[#C9A84C]"
             >
               See our Privacy Policy
             </Link>
