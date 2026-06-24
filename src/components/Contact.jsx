@@ -123,7 +123,7 @@ const Contact = () => {
                     >
                       <option value="">Select Item</option>
                       {allItems.filter((it) => it.category === m.category).map((it) => (
-                        <option key={it.title} value={it.title}>{it.title} – {it.price}</option>
+                        <option key={it.title} value={it.title}>{it.title}</option>
                       ))}
                     </select>
 
@@ -232,3 +232,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

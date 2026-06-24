@@ -87,7 +87,7 @@ const ContactForm = () => {
                 >
                   <option value="">Select Item</option>
                   {allItems.filter((item) => item.category === m.category).map((it) => (
-                    <option key={it.title}>{it.title} – {it.price}</option>
+                    <option key={it.title}>{it.title}</option>
                   ))}
                 </select>
 
@@ -132,3 +132,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+

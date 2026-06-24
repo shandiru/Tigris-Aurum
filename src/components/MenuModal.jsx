@@ -109,10 +109,9 @@ const MenuModal = ({ isOpen, onClose }) => {
                   <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">{section.title}</h2>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base text-gray-800">
-                  {section.items.map(([item, price], i) => (
-                    <div key={i} className="flex justify-between border-b py-1">
+                  {section.items.map(([item], i) => (
+                    <div key={i} className="border-b py-1">
                       <span>{item}</span>
-                      <span>{price}</span>
                     </div>
                   ))}
                 </div>
@@ -126,3 +125,5 @@ const MenuModal = ({ isOpen, onClose }) => {
 };
 
 export default MenuModal;
+
+

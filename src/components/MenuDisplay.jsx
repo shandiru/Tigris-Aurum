@@ -96,7 +96,7 @@ const MenuDisplay = () => {
                 [&::-webkit-scrollbar-thumb]:rounded-full">
                 {currentItems.map((item, idx) => (
                   <div key={idx} className="group border-b border-zinc-100 pb-4 last:border-0">
-                    <div className="flex justify-between items-start">
+                    <div className="flex items-start">
                       <div>
                         <h3 className="font-bold text-zinc-900 text-lg group-hover:text-[#C8A950] transition-colors">
                           {item.title}
@@ -105,7 +105,6 @@ const MenuDisplay = () => {
                           <p className="text-sm text-zinc-500 italic mt-1">{item.desc}</p>
                         )}
                       </div>
-                      <span className="font-bold text-zinc-900 ml-4">{item.price}</span>
                     </div>
                   </div>
                 ))}
@@ -137,3 +136,4 @@ const MenuDisplay = () => {
 };
 
 export default MenuDisplay;
+
