@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp, ChevronDown } from "lucide-react";
-import { categories, allItems } from "./MenuData"; // Path to your MenuData
+import { categories, allItems } from "./MenuData"; 
 
 const MenuDisplay = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -101,9 +101,9 @@ const MenuDisplay = () => {
                         <h3 className="font-bold text-zinc-900 text-lg group-hover:text-[#C8A950] transition-colors">
                           {item.title}
                         </h3>
-                        {/* {item.desc && (
+                        {item.desc && (
                           <p className="text-sm text-zinc-500 italic mt-1">{item.desc}</p>
-                        )} */}
+                        )}
                       </div>
                       <span className="font-bold text-zinc-900 ml-4">{item.price}</span>
                     </div>

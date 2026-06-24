@@ -48,13 +48,9 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-5">Our Menu</h3>
           <ul className="space-y-2 text-md font-semibold">
-            <li><a href="#menu" className="hover:text-[#A7862C]">Hot & Cold Sandwiches</a></li>
-            <li><a href="#menu" className="hover:text-[#A7862C]">Street Food</a></li>
-            <li><a href="#menu" className="hover:text-[#A7862C]">Mishti Milkshakes</a></li>
-            <li><a href="#menu" className="hover:text-[#A7862C]">Cold Drinks</a></li>
-            <li><a href="#menu" className="hover:text-[#A7862C]">Ice Coffee</a></li>
-            <li><a href="#menu" className="hover:text-[#A7862C]">100% Fresh Juice</a></li>
-            <li><a href="#menu" className="hover:text-[#A7862C]">Tea & Coffee</a></li>
+            <li><a href="#menu" className="hover:text-[#A7862C]">Teas</a></li>
+            <li><a href="#menu" className="hover:text-[#A7862C]">Hot Chocolate</a></li>
+            <li><a href="#menu" className="hover:text-[#A7862C]">Milkshakes</a></li>
           </ul>
         </div>
 
