@@ -9,7 +9,7 @@ import TestimonialCarousel from "../components/TestimonialCarousel"
 import WhatWeOffer from '../components/WhatWeOffer'
 import MenuScroll from '../components/MenuScroll'
 import MenuDisplay from '../components/MenuDisplay'
-
+import ServicesSectionEvent from '../components/ServicesSectionEvent'
 const Home = () => {
     return (
         <div>
@@ -20,6 +20,7 @@ const Home = () => {
             <MenuDisplay />
             <Mission />
             <CoffeeSection />
+            <ServicesSectionEvent />
             <TestimonialCarousel />
             <Gallery />
             <Contact />
