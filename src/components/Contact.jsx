@@ -57,7 +57,7 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 relative z-10">
         <div className={`rounded-[28px] border border-[#E6D39C] bg-white p-6 md:p-8 shadow-[0_20px_60px_rgba(26,26,26,0.12)] transition-all duration-1000 hover:shadow-[0_20px_60px_rgba(201,168,76,0.18)] ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">Place Your Order</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Inquire now</h2>
 
           {/* Customer Info */}
           <div className="space-y-4 mb-6">
@@ -161,7 +161,7 @@ const Contact = () => {
             onClick={() => handleSubmit("44770000000")}
             className="w-full bg-gradient-to-r from-[#C8A950] to-[#b89840] text-black font-bold py-3 rounded-lg hover:scale-[1.02] transition-all text-lg shadow-lg"
           >
-            Send Order via WhatsApp
+            Inquire now
           </button>
           <p className="text-[10px] text-gray-400 mt-5 text-center px-4">
             By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.

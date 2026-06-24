@@ -49,7 +49,7 @@ const Navbar = () => {
             style={{ color: "#111111" }}
           >
             <FiShoppingCart className="text-white" />
-            <span className="text-white">Order Now</span>
+            <span className="text-white">Inquire now</span>
           </HashLink>
         </div>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
             className="flex w-full items-center justify-center gap-2 rounded-md bg-[#E8D28A] px-4 py-3 text-base font-bold text-black shadow transition hover:bg-[#F1E2A8]"
           >
             <FiShoppingCart />
-            Order Now
+            Inquire now
           </HashLink>
         </div>
       </div>

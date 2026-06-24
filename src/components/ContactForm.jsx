@@ -35,7 +35,7 @@ const ContactForm = () => {
     <section className="relative overflow-hidden px-4 py-5">
       <div className="relative z-10 max-w-3xl mx-auto pt-10">
         <div className="rounded-[28px] border border-[#E6D39C] bg-white/92 p-6 md:p-8 shadow-[0_20px_60px_rgba(26,26,26,0.12)] backdrop-blur-sm">
-          <h3 className="text-2xl font-bold mb-6">Place Your Order</h3>
+          <h3 className="text-2xl font-bold mb-6">Inquire now</h3>
 
           {/* Inputs */}
           <div className="space-y-4 mb-6">
@@ -120,7 +120,7 @@ const ContactForm = () => {
             onClick={() => handleSubmit("+4477000000")}
             className="w-full mt-6 bg-gradient-to-r from-[#C8A950] to-[#b89840] text-black font-bold py-3 rounded-lg"
           >
-            Send Order via WhatsApp
+            Inquire now
           </button>
           <p className="text-[10px] text-gray-400 mt-4 text-center">
             By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.
